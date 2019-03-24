@@ -6,7 +6,7 @@ public class WeatherModel {
     tworzymy klase wewnetrzna, bo w main w tym konkretnym jasonie, bo obiekt temp miesci sie w klasie main
 
      */
-    private  WeatherDetails main;
+    private WeatherDetails main;
 
     public WeatherDetails getMain() {
         return main;
@@ -17,7 +17,7 @@ public class WeatherModel {
     }
 
 
-    public static class WeatherDetails{
+    public static class WeatherDetails {
 
         private double temp;
 
@@ -29,8 +29,6 @@ public class WeatherModel {
             this.temp = temp - 273;
         }
     }
-
-
 
 
 }

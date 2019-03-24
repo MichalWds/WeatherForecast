@@ -9,22 +9,16 @@
 
 
 <form action="/weathers/search">
-    <!-- odpowiednik scannera dla html (formularz)  przechodzi do weathers/serch i daje wynik do miasto  -->
+
     <label>Miasto</label>
     <input type="text" name="city">
     <input type="submit" value="Pogoda">
-<!--- wpissujemy teksty, w pole z jakims odnosnikiem, w naszym wpyadku "city"
-         public String search (@RequestParam(required = false)
-                TO JEST NASZE CITY!!! czyli nasz String jaki podajemy->>     String city, ModelMap modelMap)
-      input pod type czyli guzik submit, po wcisnieniciu submit,  daje nam wartosc
-      guzik submit ma nazwe pogoda
-                                                                                   -->
+
+                                                                                       -->
     <h3 th:if="${weather}">Pogoda w tym mieście to :</h3>
-<!--ten if mowi nam, ze musi zostac nadana wartosc wpisowa, inacej nic nam nie zwroci -->
+    <!--ten if mowi nam, ze musi zostac nadana wartosc wpisowa, inacej nic nam nie zwroci -->
     <p th:text="${weather}"></p>
-<!-- weather zwraca nam  klucz do mapy weather
-<-- to jest nasz klucz(weather)  modelMap.put("weather", weatherModel.getMain().getTemp());
-dajac nam wartosc z lunku za pomoca metody weathgerModel.getMain...-->
+
 </form>
 </body>
 </html>
