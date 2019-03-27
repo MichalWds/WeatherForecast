@@ -28,8 +28,6 @@ public class MainController {
 
         //Jason zwraca tablice,  nawiasy kwadratowe oznaczaja lsite w jasonie
     }
-
-
     @GetMapping("/weathers/search")
     public String search(@RequestParam(required = false)
                                  String city, ModelMap modelMap) {
