@@ -11,8 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MainController {
 
-
-    @ResponseBody //dzieki temu zwraca nam Stringa, bez pliku html, po to by przetestowac czy dziala
+    @ResponseBody //zwraca stringa na stronie
     @GetMapping("/a")
     public String index() {   //metoda do zwracania stringa, czyli w naszym wypadku string (adres html)
         String url = "http://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid=ef2028e98b54649bf1f4c4582631f350";
