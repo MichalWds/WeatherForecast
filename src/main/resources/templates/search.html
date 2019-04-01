@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:bg="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>Podaj miasto w jakim hccesz sprawdzić pogodę</h2>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        h1 {
+            color: darkmagenta;
+        }
+
+        h2 {
+            color: lawngreen;
+        }
+    </style>
+
+</head>
+<body background="https://i.gifer.com/XHqB.gif">
+
+<h1 align="center">Podaj miasto w jakim chcesz sprawdzić pogodę</h1>
 
 <form action="/weathers/search">
-
-    <label>Miasto</label>
-    <input type="text" name="city">
-    <input type="submit" value="Pogoda">
-
-                                                                                       -->
-    <h3 th:if="${weather}">Pogoda w tym mieście to :</h3>
-    <!--ten if mowi nam, ze musi zostac nadana wartosc wpisowa, inacej nic nam nie zwroci -->
-    <p th:text="${weather}"></p>
-
+    <div align="center">
+        <br>
+        <h2><label>Wpisz miasto</label></h2>
+        </br>
+        <input type="text" name="city">
+        <tr align="center"><input value="Sprawdź" type="submit" class="btn btn-primary" color="green"></tr>
+        <br>
+        <h2 th:if="${weather}">Pogoda w wybranym mieście to :</h2>
+        </br> <!--ten if mowi nam, ze musi zostac nadana wartosc wpisowa, inacej nic nam nie zwroci -->
+        <h2><p th:text="${weather}"></p></h2>
+    </div>
 </form>
 </body>
 </html>
