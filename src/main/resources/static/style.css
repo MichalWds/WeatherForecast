@@ -2,14 +2,7 @@ body{
 
 }
 
-.background-weather {
-    background-image: url("https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80") ;
-    height: 100vh;
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .content {
     color: white;
     font-size: 20px;

@@ -19,7 +19,7 @@ public class MainController {
         RestTemplate restTemplate = new RestTemplate(); // klasa wbudowana w Springu, w WebClientRestamble  "po skrocie rozbiera stringa"    Zamienia nam Jasona na obiekt
 
         WeatherModel weatherModel = restTemplate.getForObject(url, WeatherModel.class); // get for Object, czyli jaki obiekt ma zamienic, czyli w naszym wypadku string url na weathermodel (klasa)
-        return "temp max: " + weatherModel.getMain().getTemp();        //Jason zwraca tablice,  nawiasy kwadratowe oznaczaja lsite w jasonie
+        return "temp max: " + weatherModel.getMain().getTemp();        //Jason zwraca tablice,  nawiasy kwadratowe oznaczaja liste w jasonie
 
     }
     @GetMapping("/weathers/search")

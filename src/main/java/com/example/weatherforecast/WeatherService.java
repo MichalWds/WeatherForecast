@@ -19,9 +19,7 @@ public class WeatherService {
         if (city != null) {
             String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ef2028e98b54649bf1f4c4582631f350";
             RestTemplate restTemplate = new RestTemplate();
-            WeatherModel weatherModel = restTemplate.getForObject(url, WeatherModel.class);
-            //Obiekt ktory odnosi sie do restTemplate czyli klasy wbudowanej w Springa, czyli jaki obiekt (u nas String url) na weatherModel.class
-            // potem w rezulcie dalemy odnosnik do tego obiektu weatherModel do getMain i get Temp
+            WeatherModel weatherModel = restTemplate.getForObject(url, WeatherModel.class);  //Obiekt ktory odnosi sie do restTemplate czyli klasy wbudowanej w Springa, czyli jaki obiekt (u nas String url) na weatherModel.class
             result = df.format(weatherModel.getMain().getTemp()) + "C ";
         }
         return result;
